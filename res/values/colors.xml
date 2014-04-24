@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="login_button_pressed">#5CB8E6</color>
+    <color name="login_button_color">#3B82B6</color>
+    <color name="main_theme_color">#3B82B6</color>
+    <color name="login_field_color">#FFF</color>
+    <color name="login_field_color_focused">#F0FAFF</color>
+    <color name="login_field_stroke">#99CCFF</color>
+    <color name="COLOR_WHITE">#FFF</color>
+</resources>

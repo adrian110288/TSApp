@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tracking System MMU</string>
+    <string name="tab_one_name">All jobs</string>
+    <string name="tab_two_name">Recommended</string>
+    <string name="tab_three_name">Selected</string>
+    <string name="tab_four_name">Completed</string>
+    <string name="job_address_label">Address</string>
+    <string name="job_descripion_label">Description</string>
+    <string name="job_added_label">Date added</string>
+    <string name="job_due_label">Date due</string>
+    
+    <string name="LOGIN_PREF">LogPref</string>
+    <string name="squareContentDescription">A colorful square indicationg the job priority</string>
+    
+    <string name="SERVICE_URL_LOGIN">http://www.tracking-system-mmu.appspot.com/trackingsystemappengine?</string>
+    <string name="SERVICE_URL_ALLJOBS">http://www.tracking-system-mmu.appspot.com/alljobs?</string>
+    <string name="SERVICE_URL_SUGGESTED">http://www.tracking-system-mmu.appspot.com/recommended?</string>
+    <string name="SERVICE_URL_SELECTED">http://www.tracking-system-mmu.appspot.com/selected?</string>
+    <string name="SERVICE_URL_TOGGLE_JOB_SELECTION">http://www.tracking-system-mmu.appspot.com/toggle?</string>
+    <string name="SERVICE_URL_MARK_JOB_COMPLETED">http://www.tracking-system-mmu.appspot.com/markcompleted?</string>
+    <string name="SERVICE_URL_SUBMIT_REPORT">http://www.tracking-system-mmu.appspot.com/submitreport?</string>
+    <string name="SERVICE_URL_SUBMIT_EMPLOYEE_STATUS">http://www.tracking-system-mmu.appspot.com/submitemployeereport?</string>
+    <string name="URL_PARAMS_FORMAT">format=json</string>
+    <string name="REQUEST_METHOD">POST</string>
+    
+    <string name="LOGIN_USERNAME_NOT_FOUND">-1</string>
+    <string name="LOGIN_SUCCESS">1</string>
+    <string name="LOGIN_INCORRECT_PASSWORD">0</string>
+    <string name="LOGIN_CONNECTION_ERROR">-1</string>
+    
+</resources>

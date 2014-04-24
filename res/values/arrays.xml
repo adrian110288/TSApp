@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listHeaders">
+        <item>COMPLETED</item>
+        <item>ONGOING</item>
+    </string-array>
+    
+    <string-array name="statusReport">
+        <item>Starting shift</item>
+        <item >Ending shift</item>
+        <item >Starting job</item>
+        <item >Ending job</item>
+        <item >Lunch break</item>
+        <item >On the way to job</item>
+        <item >Other</item>
+    </string-array>
+    
+</resources>

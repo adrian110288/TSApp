@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content" 
+	   android:orientation="vertical"
+	   android:background="#FFF">
+	    
+	    <TextView
+	        android:id="@+id/details_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:textSize="30sp"
+	        android:paddingTop="5dp"
+	        android:paddingLeft="14dp"/>
+	    
+	    <TextView
+	        android:id="@+id/details_address_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingBottom="45dp"
+	        android:paddingLeft="14dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/details_title"
+	        android:textStyle="italic"/>
+	
+	    <Button
+	        android:id="@+id/details_selectButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="35dp"
+	        android:layout_toStartOf="@+id/details_delimit1"
+	        android:layout_alignBottom="@+id/details_address_text"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="25dp"
+	        android:textColor="#666"
+	        android:visibility="invisible"
+	        android:layout_marginBottom="-1dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+			android:textSize="12dp"
+			android:textStyle="bold"
+	        android:text="SELECT THIS JOB"
+	        android:background="@drawable/select_job_button_selected" />
+	    
+	    <Button
+	        android:id="@+id/details_mark_as_completed_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="35dp"
+	        android:layout_alignBottom="@+id/details_delimit1"
+	        android:layout_marginRight="30dp"
+	        android:layout_toLeftOf="@+id/details_selectButton"
+	        android:layout_toStartOf="@+id/details_delimit1"
+	        android:background="@drawable/select_job_button_selected"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="15dp"
+	        android:text="MARK AS COMPLETED"
+	        android:textColor="#666"
+	        android:textSize="12dp"
+	        android:textStyle="bold"
+	        android:visibility="invisible" />
+	    
+	    <View
+	        android:id="@+id/details_delimit1" 
+	        android:layout_width="fill_parent"
+			android:layout_height="3dp"
+			android:background="@color/main_theme_color"
+			android:layout_below="@+id/details_address_text"/>
+	    
+	    <ScrollView
+	        android:id="@+id/scrollView"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="10dp"
+		    android:paddingBottom="5dp"
+		    android:layout_below="@+id/details_address_text"
+		    android:scrollbars="none">
+		    
+	    
+	        <RelativeLayout 
+	            android:id="@+id/details_subrellayout"
+	        	android:layout_width="fill_parent"
+	      		android:layout_height="wrap_content"
+	       		android:orientation="vertical">
+		    
+			    <fragment
+			        android:id="@+id/map"
+			        android:name="com.google.android.gms.maps.SupportMapFragment"
+			        android:layout_width="match_parent"
+			        android:layout_height="200dp"
+			        android:layout_marginBottom="10dp"
+			        android:layout_alignParentLeft="true"/>
+	
+			    <Button
+			        android:id="@+id/directionsButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="35dp"
+			        android:background="@drawable/map_button"
+			        android:layout_below="@+id/map"
+			        android:textColor="#666"
+			        android:layout_toRightOf="@+id/toggleMapType"
+			        android:textSize="12dp"
+			        android:textStyle="bold"
+			        android:visibility="invisible"
+			        android:text="SHOW DIRECTIONS" />
+	
+			    <ToggleButton
+			        android:id="@+id/toggleMapType"
+			        android:layout_width="wrap_content"
+			        android:layout_height="35dp"
+			        android:textSize="12dp"
+			        android:textOn="NORMAL VIEW"
+			        android:textStyle="bold"
+			        android:textColor="#666"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:layout_marginLeft="14dp"
+			        android:layout_marginRight="10dp"
+			        android:textOff="SATELLITE VIEW"
+			        android:background="@drawable/map_button"
+			        android:layout_alignBaseline="@+id/directionsButton"
+			        android:layout_alignParentLeft="true" />
+		        
+			    <TextView
+			        android:id="@+id/details_distance"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBottom="@+id/directionsButton"
+			        android:layout_alignParentRight="true"
+			        android:layout_alignBaseline="@id/directionsButton"
+			        android:textAllCaps="true"
+			        android:textSize="12sp"
+			        android:textStyle="bold"
+			        android:textColor="#666"
+			        android:paddingBottom="5dp"
+			        android:paddingRight="14dp"
+			        />
+		    
+			    <TextView
+			        android:id="@+id/details_desc_label"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_below="@+id/directionsButton"
+			        android:text="@string/job_descripion_label"
+			        style="@style/DetailsLabelsStyle"
+			        android:paddingLeft="14dp" 
+			        android:paddingTop="10dp"/>
+			
+			    <TextView
+			        android:id="@+id/details_desc_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:paddingBottom="10dp"
+			        android:textColor="#666"
+			        android:layout_below="@+id/details_desc_label"
+			        android:text=""
+			        android:paddingLeft="14dp"
+			        android:paddingRight="14dp"/>
+			
+			    <TextView
+			        android:id="@+id/details_priority_label"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_below="@+id/details_desc_text"
+			        android:paddingTop="10dp"
+			        android:paddingLeft="14dp"
+			        android:text="Priority"
+			        style="@style/DetailsLabelsStyle"/>
+			    
+			    <TextView
+			        android:id="@+id/details_piority_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="10dp"
+			        android:textColor="#666"
+			        android:paddingLeft="14dp"
+			        android:layout_alignParentLeft="true"
+			        android:layout_below="@id/details_priority_label"
+			        />
+			    
+			    <View 
+			        android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#C9C9C9"
+					android:layout_above="@+id/details_dateadded_label"
+					/>
+			    
+			    <TextView
+			        android:id="@+id/details_dateadded_label"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_below="@+id/details_piority_text"
+			        android:paddingTop="10dp"
+			        android:paddingLeft="14dp"
+			        android:text="@string/job_added_label"
+			        style="@style/DetailsLabelsStyle"/>
+		
+			    <View 
+			        android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#C9C9C9"
+					android:layout_above="@+id/details_priority_label"
+					/>
+			    
+			    <TextView
+			        android:id="@+id/details_datedue_label"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:paddingTop="10dp"
+			        android:paddingLeft="14dp"
+			        android:layout_below="@+id/details_dateadded_text"
+			        android:text="@string/job_due_label" 
+			        style="@style/DetailsLabelsStyle"/>
+			
+			    <View 
+			        android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#C9C9C9" 
+					android:layout_above="@+id/details_datedue_label"
+					/>
+			    
+			    <TextView
+			        android:id="@+id/details_datedue_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/details_dateadded_text"
+			        android:layout_below="@+id/details_datedue_label"
+			        android:textColor="#666"
+			        android:text=""
+			        android:paddingLeft="14dp" />
+			
+			    <TextView
+			        android:id="@+id/details_dateadded_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:paddingBottom="10dp"
+			        android:textColor="#666"
+			        android:paddingLeft="14dp"
+			        android:layout_alignParentLeft="true"
+			        android:layout_below="@id/details_dateadded_label"
+			        android:text="" />
+			</RelativeLayout>
+		</ScrollView>
+
+	    
+
+</RelativeLayout>    
+

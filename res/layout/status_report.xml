@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="14dp"
+	android:layout_marginRight="14dp"
+     >
+
+    <TextView
+        android:id="@+id/reportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee status report"
+        android:textSize="30sp"
+	    android:paddingTop="5dp"
+	    />
+    
+    <TextView 
+        android:id="@+id/dateLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    
+    <TextView 
+        android:id="@+id/timeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    
+    <TextView 
+        android:id="@+id/locLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location: Obtaining "
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    
+    <TextView 
+        android:id="@+id/mainSpinnerLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current activity:"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    
+    <Spinner
+        android:id="@+id/statusSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dp"/>
+    
+    <TextView 
+        android:id="@+id/jobLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specify job:"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:visibility="invisible"/>
+    
+    <Spinner
+        android:id="@+id/jobsSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView 
+        android:id="@+id/addComentLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Additional comments"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    
+    <EditText 
+        android:id="@+id/addComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter comment ..."/>
+    
+    <Button
+	        android:id="@+id/submitEmployeeReport"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:background="@drawable/login_button_states"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:text="Waiting for location ..."
+	        android:textColor="@color/COLOR_WHITE" />
+    
+</LinearLayout>
