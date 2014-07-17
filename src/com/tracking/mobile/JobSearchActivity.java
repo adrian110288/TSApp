@@ -44,7 +44,7 @@ public class JobSearchActivity extends FragmentActivity {
 		ActionBar bar = getActionBar();
 
 		SpannableString s = new SpannableString(getResources().getString(R.string.app_name));
-	    s.setSpan(new TypefaceSpan(this, "weblysleekuil.ttf"), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+	    s.setSpan(new TypefaceSpan(this, "Minecrafter_3.ttf"), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 	    bar.setTitle(s);
 		
 		ConnectivityManager conn = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
